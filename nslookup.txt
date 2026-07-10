@@ -1,0 +1,148 @@
+erver:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+Name:	google.com
+Address: 142.250.206.14
+Name:	google.com
+Address: 2404:6800:4007:80f::200e
+
+ifetcslab@ifetcslab-System-Product-Name:~$ nslookup youtube.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+youtube.com	canonical name = facebook.com.
+Name:	facebook.com
+Address: 127.0.0.1
+
+ifetcslab@ifetcslab-System-Product-Name:~$ nslookup instagram.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+instagram.com	canonical name = facebook.com.
+Name:	facebook.com
+Address: 127.0.0.1
+
+ifetcslab@ifetcslab-System-Product-Name:~$ nslookup facebook.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Name:	facebook.com
+Address: 127.0.0.1
+
+ifetcslab@ifetcslab-System-Product-Name:~$ ^C
+ifetcslab@ifetcslab-System-Product-Name:~$ nslookup -type google.com
+*** Invalid option: type
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+Name:	google.com
+Address: 142.250.77.142
+Name:	google.com
+Address: 2404:6800:4007:80f::200e
+
+ifetcslab@ifetcslab-System-Product-Name:~$ nslookup -type = ns google.com
+*** Invalid option: type
+Usage:
+   nslookup [-opt ...]             # interactive mode using default server
+   nslookup [-opt ...] - server    # interactive mode using 'server'
+   nslookup [-opt ...] host        # just look up 'host' using default server
+   nslookup [-opt ...] host server # just look up 'host' using 'server'
+ifetcslab@ifetcslab-System-Product-Name:~$ nslookup -type = ns vulnweb.com
+*** Invalid option: type
+Usage:
+   nslookup [-opt ...]             # interactive mode using default server
+   nslookup [-opt ...] - server    # interactive mode using 'server'
+   nslookup [-opt ...] host        # just look up 'host' using default server
+   nslookup [-opt ...] host server # just look up 'host' using 'server'
+ifetcslab@ifetcslab-System-Product-Name:~$ nslookup -type=ns vulnweb.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+vulnweb.com	nameserver = ns-557.awsdns-05.net.
+vulnweb.com	nameserver = ns-1450.awsdns-53.org.
+vulnweb.com	nameserver = ns-1588.awsdns-06.co.uk.
+vulnweb.com	nameserver = ns-136.awsdns-17.com.
+
+Authoritative answers can be found from:
+
+ifetcslab@ifetcslab-System-Product-Name:~$ nslookup -type=ns google.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+google.com	nameserver = ns1.google.com.
+google.com	nameserver = ns3.google.com.
+google.com	nameserver = ns2.google.com.
+google.com	nameserver = ns4.google.com.
+
+Authoritative answers can be found from:
+
+ifetcslab@ifetcslab-System-Product-Name:~$ nslookup -type=ns youtube.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+youtube.com	nameserver = ns2.google.com.
+youtube.com	nameserver = ns1.google.com.
+youtube.com	nameserver = ns3.google.com.
+youtube.com	nameserver = ns4.google.com.
+
+Authoritative answers can be found from:
+
+ifetcslab@ifetcslab-System-Product-Name:~$ nslookup -type=ns ifet.ac.in
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+ifet.ac.in	nameserver = ns2.dns-parking.com.
+ifet.ac.in	nameserver = ns1.dns-parking.com.
+
+Authoritative answers can be found from:
+
+ifetcslab@ifetcslab-System-Product-Name:~$ nslookup -type=mx googgle.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+*** Can't find googgle.com: No answer
+
+Authoritative answers can be found from:
+googgle.com
+	origin = ns1.googledomains.com
+	mail addr = cloud-dns-hostmaster.google.com
+	serial = 1
+	refresh = 21600
+	retry = 3600
+	expire = 259200
+	minimum = 300
+
+ifetcslab@ifetcslab-System-Product-Name:~$ nslookup -type=mx google.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+google.com	mail exchanger = 10 smtp.google.com.
+
+Authoritative answers can be found from:
+
+ifetcslab@ifetcslab-System-Product-Name:~$ nslookup -type=mx ifet.ac.in
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+ifet.ac.in	mail exchanger = 5 alt1.aspmx.l.google.com.
+ifet.ac.in	mail exchanger = 1 aspmx.l.google.com.
+ifet.ac.in	mail exchanger = 10 alt4.aspmx.l.google.com.
+ifet.ac.in	mail exchanger = 10 alt3.aspmx.l.google.com.
+ifet.ac.in	mail exchanger = 5 alt2.aspmx.l.google.com.
+ifet.ac.in	mail exchanger = 5 mx1.hostinger.com.
+ifet.ac.in	mail exchanger = 10 mx2.hostinger.com.
+
+Authoritative answers can be found from:
+
+ifetcslab@ifetcslab-System-Product-Name:~$ 
+
+

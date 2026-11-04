@@ -1,0 +1,351 @@
+nslookup google.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+Name:	google.com
+Address: 142.250.206.14
+Name:	google.com
+Address: 2404:6800:4007:80f::200e
+nslookup -type=ns youtube.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+youtube.com	nameserver = ns2.google.com.
+youtube.com	nameserver = ns1.google.com.
+youtube.com	nameserver = ns3.google.com.
+youtube.com	nameserver = ns4.google.com.
+
+Authoritative answers can be found from:
+
+ nslookup -type=mx youtube.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+youtube.com	mail exchanger = 0 smtp.google.com.
+
+Authoritative answers can be found from:
+
+
+crypl-14@crypl-14-System-Product-Name:~$ 
+crypl-14@crypl-14-System-Product-Name:~$ nslookup-Type=text google.com
+nslookup-Type=text: command not found
+crypl-14@crypl-14-System-Product-Name:~$ nslookup -type=text google.com
+unknown query type: text
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+Name:	google.com
+Address: 172.217.24.206
+Name:	google.com
+Address: 2404:6800:4007:83f::200e
+
+crypl-14@crypl-14-System-Product-Name:~$ nslookup -type=soa google.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+google.com
+	origin = ns1.google.com
+	mail addr = dns-admin.google.com
+	serial = 948988168
+	refresh = 900
+	retry = 900
+	expire = 1800
+	minimum = 60
+
+Authoritative answers can be found from:
+
+crypl-14@crypl-14-System-Product-Name:~$ nslookup -type=ANY google.com 8.8.8.8
+Server:		8.8.8.8
+Address:	8.8.8.8#53
+
+Non-authoritative answer:
+Name:	google.com
+Address: 142.250.76.174
+Name:	google.com
+Address: 2404:6800:4009:81a::200e
+google.com	text = "Z29vZ2xl"
+google.com	nameserver = ns4.google.com.
+google.com	text = "globalsign-smime-dv=CDYX+XFHUw2wml6/Gb8+59BsH31KzUr6c1l2BPvqKX8="
+google.com	text = "google-site-verification=wD8N7i1JTNTkezJ49swvWW48f8_9xveREV4oB-0Hf5o"
+google.com	text = "v=spf1 include:_spf.google.com ~all"
+google.com	text = "google-site-verification=TV9-DBe4R80X4v0M4U_bd_J9cpOJM0nikft0jAgjmsQ"
+google.com	nameserver = ns3.google.com.
+google.com	rdata_257 = 0 issue "pki.goog"
+google.com	mail exchanger = 10 smtp.google.com.
+google.com	text = "docusign=05958488-4752-4ef2-95eb-aa7ba8a3bd0e"
+google.com	text = "cisco-ci-domain-verification=47c38bc8c4b74b7233e9053220c1bbe76bcc1cd33c7acf7acd36cd6a5332004b"
+google.com
+	origin = ns1.google.com
+	mail addr = dns-admin.google.com
+	serial = 948988168
+	refresh = 900
+	retry = 900
+	expire = 1800
+	minimum = 60
+google.com	text = "apple-domain-verification=30afIBcvSuDV2PLX"
+google.com	rdata_65 = 1 . alpn="h2,h3"
+google.com	text = "facebook-domain-verification=22rm551cu4k0ab0bxsw536tlds4h95"
+google.com	text = "MS=E4A68B9AB2BB9670BCE15412F62916164C0B20BB"
+google.com	nameserver = ns1.google.com.
+google.com	text = "google-site-verification=4ibFUgB-wXLQ_S7vsXVomSTVamuOXBiVAzpR5IZ87D0"
+google.com	text = "onetrust-domain-verification=6d685f1d41a94696ad7ef771f68993e0"
+google.com	text = "work-accounts-domain-verification=Tcj6JjIMZOw2KsSEw2Nt2rLae89tN6"
+google.com	text = "docusign=1b0a6754-49b1-4db5-8540-d2c12664b289"
+google.com	nameserver = ns2.google.com.
+google.com	text = "onetrust-domain-verification=0d477fe608074e6f9c12bca7826035cc"
+
+Authoritative answers can be found from:
+
+crypl-14@crypl-14-System-Product-Name:~$ nslookup google.com 8.8.8.8
+Server:		8.8.8.8
+Address:	8.8.8.8#53
+
+Non-authoritative answer:
+Name:	google.com
+Address: 142.251.222.206
+Name:	google.com
+Address: 2404:6800:4007:815::200e
+
+crypl-14@crypl-14-System-Product-Name:~$ nslookup -debug google.com
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+------------
+    QUESTIONS:
+	google.com, type = A, class = IN
+    ANSWERS:
+    ->  google.com
+	internet address = 172.217.24.206
+	ttl = 246
+    AUTHORITY RECORDS:
+    ADDITIONAL RECORDS:
+------------
+Non-authoritative answer:
+Name:	google.com
+Address: 172.217.24.206
+------------
+    QUESTIONS:
+	google.com, type = AAAA, class = IN
+    ANSWERS:
+    ->  google.com
+	has AAAA address 2404:6800:4007:83f::200e
+	ttl = 300
+    AUTHORITY RECORDS:
+    ADDITIONAL RECORDS:
+------------
+Name:	google.com
+Address: 2404:6800:4007:83f::200e
+
+crypl-14@crypl-14-System-Product-Name:~$ whatweb google.com
+http://google.com [301 Moved Permanently] Country[UNITED STATES][US], HTTPServer[gws], IP[172.217.24.206], RedirectLocation[http://www.google.com/], Title[301 Moved], UncommonHeaders[content-security-policy-report-only,cache-status], Via-Proxy[1.1 tg42cdec (squid/6.9)], X-Frame-Options[SAMEORIGIN], X-XSS-Protection[0]
+http://www.google.com/ [200 OK] Cookies[AEC,NID,__Secure-STRP], Country[UNITED STATES][US], HTML5, HTTPServer[gws], HttpOnly[AEC,NID], IP[142.251.152.119], Script, Title[Google], UncommonHeaders[content-security-policy-report-only,cache-status], Via-Proxy[1.1 tg42cdec (squid/6.9)], X-Frame-Options[SAMEORIGIN], X-XSS-Protection[0]
+crypl-14@crypl-14-System-Product-Name:~$ whatweb -v google.com
+WhatWeb report for http://google.com
+Status    : 301 Moved Permanently
+Title     : 301 Moved
+IP        : 172.217.24.206
+Country   : UNITED STATES, US
+
+Summary   : HTTPServer[gws], RedirectLocation[http://www.google.com/], UncommonHeaders[content-security-policy-report-only,cache-status], Via-Proxy[1.1 tg42cdec (squid/6.9)], X-Frame-Options[SAMEORIGIN], X-XSS-Protection[0]
+
+Detected Plugins:
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : gws (from server string)
+
+[ RedirectLocation ]
+	HTTP Server string location. used with http-status 301 and 
+	302 
+
+	String       : http://www.google.com/ (from location)
+
+[ UncommonHeaders ]
+	Uncommon HTTP server headers. The blacklist includes all 
+	the standard headers and many non standard but common ones. 
+	Interesting but fairly common headers should have their own 
+	plugins, eg. x-powered-by, server and x-aspnet-version. 
+	Info about headers can be found at www.http-stats.com 
+
+	String       : content-security-policy-report-only,cache-status (from headers)
+
+[ Via-Proxy ]
+	This plugin extracts the proxy server details from the Via 
+	param of the HTTP header. 
+
+	String       : 1.1 tg42cdec (squid/6.9)
+
+[ X-Frame-Options ]
+	This plugin retrieves the X-Frame-Options value from the 
+	HTTP header. - More Info: 
+	http://msdn.microsoft.com/en-us/library/cc288472%28VS.85%29.
+	aspx
+
+	String       : SAMEORIGIN
+
+[ X-XSS-Protection ]
+	This plugin retrieves the X-XSS-Protection value from the 
+	HTTP header. - More Info: 
+	http://msdn.microsoft.com/en-us/library/cc288472%28VS.85%29.
+	aspx
+
+	String       : 0
+
+HTTP Headers:
+	HTTP/1.1 301 Moved Permanently
+	Location: http://www.google.com/
+	Content-Type: text/html; charset=UTF-8
+	Content-Security-Policy-Report-Only: object-src 'none';base-uri 'self';script-src 'nonce-WaL1Pg8ds7WW8pt2RxasBg' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp
+	Date: Fri, 17 Jul 2026 08:27:52 GMT
+	Expires: Sun, 16 Aug 2026 08:27:52 GMT
+	Cache-Control: public, max-age=2592000
+	Server: gws
+	Content-Length: 219
+	X-XSS-Protection: 0
+	X-Frame-Options: SAMEORIGIN
+	Age: 1031
+	Cache-Status: tg42cdec;hit;detail=match
+	Via: 1.1 tg42cdec (squid/6.9)
+	Connection: close
+	
+WhatWeb report for http://www.google.com/
+Status    : 200 OK
+Title     : Google
+IP        : 142.251.157.119
+Country   : UNITED STATES, US
+
+Summary   : Cookies[AEC,NID,__Secure-STRP], HTML5, HTTPServer[gws], HttpOnly[AEC,NID], Script, UncommonHeaders[content-security-policy-report-only,cache-status], Via-Proxy[1.1 tg42cdec (squid/6.9)], X-Frame-Options[SAMEORIGIN], X-XSS-Protection[0]
+
+Detected Plugins:
+[ Cookies ]
+	Display the names of cookies in the HTTP headers. The 
+	values are not returned to save on space. 
+
+	String       : __Secure-STRP
+	String       : AEC
+	String       : NID
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration 
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : gws (from server string)
+
+[ HttpOnly ]
+	If the HttpOnly flag is included in the HTTP set-cookie 
+	response header and the browser supports it then the cookie 
+	cannot be accessed through client side script - More Info: 
+	http://en.wikipedia.org/wiki/HTTP_cookie 
+
+	String       : AEC,NID
+
+[ Script ]
+	This plugin detects instances of script HTML elements and 
+	returns the script language/type. 
+
+
+[ UncommonHeaders ]
+	Uncommon HTTP server headers. The blacklist includes all 
+	the standard headers and many non standard but common ones. 
+	Interesting but fairly common headers should have their own 
+	plugins, eg. x-powered-by, server and x-aspnet-version. 
+	Info about headers can be found at www.http-stats.com 
+
+	String       : content-security-policy-report-only,cache-status (from headers)
+
+[ Via-Proxy ]
+	This plugin extracts the proxy server details from the Via 
+	param of the HTTP header. 
+
+	String       : 1.1 tg42cdec (squid/6.9)
+
+[ X-Frame-Options ]
+	This plugin retrieves the X-Frame-Options value from the 
+	HTTP header. - More Info: 
+	http://msdn.microsoft.com/en-us/library/cc288472%28VS.85%29.
+	aspx
+
+	String       : SAMEORIGIN
+
+[ X-XSS-Protection ]
+	This plugin retrieves the X-XSS-Protection value from the 
+	HTTP header. - More Info: 
+	http://msdn.microsoft.com/en-us/library/cc288472%28VS.85%29.
+	aspx
+
+	String       : 0
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Content-Type: text/html; charset=ISO-8859-1
+	Date: Fri, 17 Jul 2026 08:45:04 GMT
+	Expires: -1
+	Cache-Control: private, max-age=0
+	Content-Security-Policy-Report-Only: object-src 'none';base-uri 'self';script-src 'nonce-kmDNRyAWBSrW_TzwBXsQ7Q' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp
+	P3P: CP="This is not a P3P policy! See g.co/p3phelp for more info."
+	Content-Encoding: gzip
+	Server: gws
+	Content-Length: 27879
+	X-XSS-Protection: 0
+	X-Frame-Options: SAMEORIGIN
+	Set-Cookie: __Secure-STRP=ANmZwa29sQNtgS8Cj5RgjZgBof8KL46YX35J8-3K9G20lATN_XrVNR5XHVpeFud9ZWBWLUasrbMwtgr1DpZsnUJAL1ooXG-mhaIj; expires=Fri, 17-Jul-2026 08:50:04 GMT; path=/; domain=.google.com; Secure; SameSite=strict
+	Set-Cookie: AEC=AdJVEasau0y6diti6RzdPpOfsd_POz8gx9tXOVLF4OkBIwykeqtnZ3fvqC8; expires=Wed, 13-Jan-2027 08:45:04 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=lax
+	Set-Cookie: NID=533=iSsDM0r3vFLVZ-ZLokFgvPAbf5B9y1HULDes6S_Dk5YfNBeLN3p7jxfvIbYN4P9KT-3hByY86yX_3AckRW6DurygTp_4usg7SW5FMpxXBmYYbdlPBy1bhN3TOQV1WIPAgCuaLKB2cSOrNCsrUe0fqhHT4jekLKqsTg5MxeGwHDGL1wFii9kOMqkO7qI9Pf0ezioGz7gjnvsLegtmeKyCnLBI; expires=Sat, 16-Jan-2027 08:45:04 GMT; path=/; domain=.google.com; HttpOnly
+	Cache-Status: tg42cdec;detail=mismatch
+	Via: 1.1 tg42cdec (squid/6.9)
+	Connection: close
+	
+crypl-14@crypl-14-System-Product-Name:~$ whatweb -a 1 google.com
+http://google.com [301 Moved Permanently] Country[UNITED STATES][US], HTTPServer[gws], IP[172.217.24.206], RedirectLocation[http://www.google.com/], Title[301 Moved], UncommonHeaders[content-security-policy-report-only,cache-status], Via-Proxy[1.1 tg42cdec (squid/6.9)], X-Frame-Options[SAMEORIGIN], X-XSS-Protection[0]
+http://www.google.com/ [200 OK] Cookies[AEC,NID,__Secure-STRP], Country[UNITED STATES][US], HTML5, HTTPServer[gws], HttpOnly[AEC,NID], IP[142.251.157.119], Script, Title[Google], UncommonHeaders[content-security-policy-report-only,cache-status], Via-Proxy[1.1 tg42cdec (squid/6.9)], X-Frame-Options[SAMEORIGIN], X-XSS-Protection[0]
+crypl-14@crypl-14-System-Product-Name:~$ 
+sh: corrupt history file /home/crypl/.zsh_history
+┌──(crypl㉿vbox)-[~]
+└─$ theHarvester -d google.com -1  10 -b google             
+Read proxies.yaml from /home/crypl/.theHarvester/proxies.yaml
+*******************************************************************
+*  _   _                                            _             *
+* | |_| |__   ___    /\  /\__ _ _ ____   _____  ___| |_ ___ _ __  *
+* | __|  _ \ / _ \  / /_/ / _` | '__\ \ / / _ \/ __| __/ _ \ '__| *
+* | |_| | | |  __/ / __  / (_| | |   \ V /  __/\__ \ ||  __/ |    *
+*  \__|_| |_|\___| \/ /_/ \__,_|_|    \_/ \___||___/\__\___|_|    *
+*                                                                 *
+* theHarvester 4.6.0                                              *
+* Coded by Christian Martorella                                   *
+* Edge-Security Research                                          *
+* cmartorella@edge-security.com                                   *
+*                                                                 *
+*******************************************************************
+usage: theHarvester [-h] -d DOMAIN [-l LIMIT] [-S START] [-p] [-s] [--screenshot SCREENSHOT] [-v] [-e DNS_SERVER] [-t] [-r [DNS_RESOLVE]] [-n] [-c] [-f FILENAME] [-b SOURCE]
+theHarvester: error: unrecognized arguments: -1 10
+                                                                                                                                                                                                                                   
+┌──(crypl㉿vbox)-[~]
+└─$ theHarvester -d google.com -1  10 -b bing  
+Read proxies.yaml from /home/crypl/.theHarvester/proxies.yaml
+*******************************************************************
+*  _   _                                            _             *
+* | |_| |__   ___    /\  /\__ _ _ ____   _____  ___| |_ ___ _ __  *
+* | __|  _ \ / _ \  / /_/ / _` | '__\ \ / / _ \/ __| __/ _ \ '__| *
+* | |_| | | |  __/ / __  / (_| | |   \ V /  __/\__ \ ||  __/ |    *
+*  \__|_| |_|\___| \/ /_/ \__,_|_|    \_/ \___||___/\__\___|_|    *
+*                                                                 *
+* theHarvester 4.6.0                                              *
+* Coded by Christian Martorella                                   *
+* Edge-Security Research                                          *
+* cmartorella@edge-security.com                                   *
+*                                                                 *
+*******************************************************************
+usage: theHarvester [-h] -d DOMAIN [-l LIMIT] [-S START] [-p] [-s] [--screenshot SCREENSHOT] [-v] [-e DNS_SERVER] [-t] [-r [DNS_RESOLVE]] [-n] [-c] [-f FILENAME] [-b SOURCE]
+theHarvester: error: unrecognized arguments: -1 10
+
+
